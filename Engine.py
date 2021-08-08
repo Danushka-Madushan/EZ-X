@@ -10,8 +10,8 @@ try:
 	_movie_count = _data['data']['movie_count']
 	_count = 0
 	_index_ = 1
+	
 	print("\n ------------------------------------------------------------------------------------------ ")
-
 	if _movie_count == 0:
 		print("                  : 0 YIFY Movies Found! :( Try Using Different Keywords :")
 		print(" ------------------------------------------------------------------------------------------ ")
