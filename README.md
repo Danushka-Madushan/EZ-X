@@ -9,6 +9,6 @@
 
 > • Type Movie Name or Keyword and hit Enter 
 
-> • Select Movie Number from Movie Result :)
+> • Select Movie Number from Movie Result
 
-> • Copy Magnet Link 
+> • Copy Magnet Link from the Result Page :)
