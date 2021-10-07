@@ -15,7 +15,7 @@ while True:
 				print("\n Invalid Input...")
 				time.sleep(1)
 				sys.exit()
-			_api = ("https://yts.mx/api/v2/list_movies.json?query_term={}&limit=50&sort_by={}&page=1".format(_user_search, "year"))
+			_api = # Source Code is Available Separately
 			_search_data = requests.get(_api).json()
 			
 			_movie_count = _search_data['data']['movie_count']
@@ -23,7 +23,7 @@ while True:
 			_index_ = 1
 
 			if _movie_count >= 51:
-				_api_2 = ("https://yts.mx/api/v2/list_movies.json?query_term={}&limit=50&sort_by={}&page=2".format(_user_search, "year"))
+				_api_2 = # Source Code is Available Separately
 				_search_data_2 = requests.get(_api_2).json()
 				_movie_count_2 = len(_search_data_2['data']['movies'])
 				f = 0
