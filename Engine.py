@@ -81,16 +81,16 @@ while True:
 
 			req = requests.get(_url).content.decode("utf-8")
 
-			_main_data_ = []  # this list is for store Extracted links(This list Have Duplicate items)
-			_modified_webdata_ = []  # list with only Download Links {all Magenet Links Were Rmoved}(This list Have Duplicate items)
-			_extracted_textdata_ = []  # Extracted Text Strings (This list Have Duplicate items)
+			_main_data_ = [] 
+			_modified_webdata_ = [] 
+			_extracted_textdata_ = [] 
 			_file_size_data_ = []
 			_file_size_packets_ = []
 			_mobile_movie_data = []
 			_seen_1 = set()
-			_result_1 = []  # Links Without Duplicate items
+			_result_1 = []  
 			_seen_2 = set()
-			_result_2 = []  # Texts Without Duplicate Strings
+			_result_2 = []
 
 			soup = BeautifulSoup(req, features="html5lib")
 
