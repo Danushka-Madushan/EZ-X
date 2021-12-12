@@ -15,7 +15,7 @@ while True:
 				print("\n Invalid Input...")
 				time.sleep(1)
 				sys.exit()
-			_api = # Source Code is Available Separately
+			_api = ("https://yts.mx/api/v2/list_movies.json?query_term={}&limit=50&sort_by={}&page=1".format(_user_search, "year"))
 			_search_data = requests.get(_api).json()
 			
 			_movie_count = _search_data['data']['movie_count']
@@ -23,14 +23,13 @@ while True:
 			_index_ = 1
 
 			if _movie_count >= 51:
-				_api_2 = # Source Code is Available Separately
+				_api_2 = ("https://yts.mx/api/v2/list_movies.json?query_term={}&limit=50&sort_by={}&page=2".format(_user_search, "year"))
 				_search_data_2 = requests.get(_api_2).json()
 				_movie_count_2 = len(_search_data_2['data']['movies'])
 				f = 0
 				for z in range(_movie_count_2):
 					_search_data['data']['movies'].append(_search_data_2['data']['movies'][f])
 					f+=1
-					
 
 			print("\n ------------------------------------------------------------------------------------------ ")
 
@@ -81,16 +80,16 @@ while True:
 
 			req = requests.get(_url).content.decode("utf-8")
 
-			_main_data_ = [] 
-			_modified_webdata_ = [] 
-			_extracted_textdata_ = [] 
+			_main_data_ = []  # this list is for store Extracted links(This list Have Duplicate items)
+			_modified_webdata_ = []  # list with only Download Links {all Magenet Links Were Rmoved}(This list Have Duplicate items)
+			_extracted_textdata_ = []  # Extracted Text Strings (This list Have Duplicate items)
 			_file_size_data_ = []
 			_file_size_packets_ = []
 			_mobile_movie_data = []
 			_seen_1 = set()
-			_result_1 = []  
+			_result_1 = []  # Links Without Duplicate items
 			_seen_2 = set()
-			_result_2 = []
+			_result_2 = []  # Texts Without Duplicate Strings
 
 			soup = BeautifulSoup(req, features="html5lib")
 
